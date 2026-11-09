@@ -138,16 +138,19 @@ form.addEventListener("submit", (event) =>{
     feedback.style.color = "red";
     return;
   }
-
+// construct the object and store it in our array
   const newParticipant = {
     id: nextId++,
     name: name,
     club: club,
     attended: false
   };
-
+ // add the new object in my array
   participants.push(newParticipant);
+  nextId++;
 
+  ///* focus the input field (without the user needing to click inside it) */
+  nameInput.focus();
   feedback.textContent =
     `${name} wurde erfolgreich registriert.`;
 
