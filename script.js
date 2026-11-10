@@ -85,11 +85,11 @@ document.body.append(
 let nextId = 4;
 // grab all the properties i need to use
 const form2 = document.querySelector("#participantForm");
-const participantsInput = document.querySelector("partcipantName")
-const clubSelection = document.querySelector("club")
-const participantList2 = document.querySelector("participantsList")
-const feedbackrequired = document.querySelector("feedback")
-const summarys = document.querySelector("summary")
+const participantsInput = document.querySelector("#partcipantName")
+const clubSelection = document.querySelector("#club")
+const participantList2 = document.querySelector("#participantList")
+const feedbackrequired = document.querySelector("#feedback")
+const summarys = document.querySelector("#summary")
 
 
 function renderParticpants(){
@@ -147,6 +147,7 @@ form.addEventListener("submit", (event) =>{
   };
  // add the new object in my array
   participants.push(newParticipant);
+  renderParticpants();
   nextId++;
 
   ///* focus the input field (without the user needing to click inside it) */
